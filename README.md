@@ -1,12 +1,12 @@
-# Essentia Music Feature Extractor Demo
+# Essentia Music Data to Luau
 
-This is a simple demo project that uses the [Essentia](https://essentia.upf.edu/) audio analysis library to extract detailed musical features from an audio file and save them as JSON data.
+This is a simple demo project that uses the [Essentia](https://essentia.upf.edu/) audio analysis library to extract detailed musical features from an audio file and save them as a luau data object.
 
 ## What It Does
 
 - Takes an input audio file (e.g., `.mp3`, `.m4a`)
 - Extracts features such as tempo (BPM), beat positions, and low-level audio descriptors
-- Saves the extracted data into a `song_features.json` file
+- Saves the extracted data into a `<filename>.luau` file
 
 This demo can serve as a starting point for music analysis tasks such as building rhythm games, music visualization, or audio classification.
 
@@ -19,8 +19,8 @@ This demo can serve as a starting point for music analysis tasks such as buildin
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/essentia-music-extractor-demo.git
-    cd essentia-music-extractor-demo
+    git clone https://github.com/stom66/essentia-audio-to-luau
+    cd essentia-audio-to-luau
     ```
 
 2. Create and activate a virtual environment (recommended):
@@ -38,18 +38,26 @@ This demo can serve as a starting point for music analysis tasks such as buildin
     > pip install essentia --break-system-packages
     > ```
 
-4. Add your audio file to the `input/` directory. Update the `audio_path` in `extractData.py` if needed.
+### Usage
 
-5. Run the feature extraction script:
-    ```bash
-    python extractData.py
-    ```
+Place your audio file anywhere on disk (e.g., `input/song.m4a`), then run:
 
-6. After running, a `song_features.json` file will be created with the extracted features.
+```bash
+python extractData.py input/song.m4a
+```
+
+This will create a new file:
+
+```sh
+input/song.luau
+```
+
+It contains a Luau-formatted table with key features extracted from the song.
+
 
 ## Understanding the Output
 
-- The JSON file contains detailed musical data, including BPM (`rhythm.bpm`), beat positions (`rhythm.beats_position`), and more.
+- The `luau` file contains detailed musical data, including BPM (`rhythm.bpm`), beat positions (`rhythm.beats_position`), and more.
 - You can use this data to build rhythm-based applications, analyze music structure, or explore audio features.
 - See [ABOUT_THE_DATA](ABOUT_THE_DATA.md) for a Chat-GPT generated explanation of the json data.
 
@@ -61,4 +69,7 @@ This demo can serve as a starting point for music analysis tasks such as buildin
 
 ## License
 
-Whatever. I did nothing here but tie some things together. Check the Essentia license if you have concerns.
+Contains music from: 
+https://pixabay.com/music/soft-house-dame-esta-noche-house-background-music-for-video-vlog-full-version-368516/
+
+This repo is a demo. Credit goes to the Essentia team for the heavy lifting. License their stuff appropriately.
