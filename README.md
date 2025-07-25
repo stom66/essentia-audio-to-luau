@@ -35,21 +35,30 @@ This demo can serve as a starting point for music analysis tasks such as buildin
     ```
     > **Note:** On some systems, you may need to add `--break-system-packages` when installing Essentia:
     > ```bash
-    > pip install essentia --break-system-packages
+    > pip install essentia requests --break-system-packages
     > ```
 
 ### Usage
 
+
+#### From file:
+
 Place your audio file anywhere on disk (e.g., `input/song.m4a`), then run:
 
 ```bash
-python extractData.py input/song.m4a
+python file-to-luau.py input/song.m4a
 ```
 
-This will create a new file:
+#### From Roblox ID:
+
+```bash
+python roblox-id-to-luau.py 123456789
+```
+
+Both of these options will create a new file:
 
 ```sh
-input/song.luau
+input/[filename].luau
 ```
 
 It contains a Luau-formatted table with key features extracted from the song.
@@ -59,7 +68,7 @@ It contains a Luau-formatted table with key features extracted from the song.
 
 - The `luau` file contains detailed musical data, including BPM (`rhythm.bpm`), beat positions (`rhythm.beats_position`), and more.
 - You can use this data to build rhythm-based applications, analyze music structure, or explore audio features.
-- See [ABOUT_THE_DATA](ABOUT_THE_DATA.md) for a Chat-GPT generated explanation of the json data.
+- See [ABOUT_THE_DATA](ABOUT_THE_DATA.md) for a Chat-GPT generated explanation of the data.
 
 ## Troubleshooting
 
