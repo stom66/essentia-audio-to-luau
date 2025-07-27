@@ -17,3 +17,6 @@ Thumbs.db
 # Logs or temp
 *.log
 *.tmp
+
+input/*
+output/*
