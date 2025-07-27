@@ -54,7 +54,7 @@ This is a simple demo project that uses the [Essentia](https://essentia.upf.edu/
 ### 🗂️ Convert a Local File
 
 ```bash
-python file-to-luau.py path/to/audio.mp3
+python file_to_luau.py path/to/audio.mp3
 ```
 
 This creates:
@@ -66,7 +66,7 @@ path/to/audio.luau
 ### 🔗 Convert a Roblox Audio Asset ID
 
 ```sh
-python roblox-id-to-luau.py 123456789 
+python roblox_id_to_luau.py 123456789 
 ```
 
 This downloads the audio from Roblox and saves:
@@ -78,7 +78,7 @@ output/123456789.luau
 Multiple asset IDs are supported:
 
 ```sh
-python roblox-id-to-luau.py 123456789 987654321
+python roblox_id_to_luau.py 123456789 987654321
 ```
 
 ## 📄 Output Format
